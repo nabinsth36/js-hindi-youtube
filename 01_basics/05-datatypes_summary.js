@@ -30,17 +30,19 @@ const myFunction = function () {
   console.log("hello world");
 };
 
-console.log(typeof bigNumber);
+console.log(typeof isLoggedIn); // boolean
 
-console.log(typeof outsideTemp);
+console.log(typeof bigNumber); // bigint
 
-console.log(typeof myFunction);
+console.log(typeof outsideTemp); // object
 
-console.log(typeof heros);
+console.log(typeof myFunction); // function
 
-console.log(typeof myObj);
-console.log(typeof userEmail);
+console.log(typeof heros); // object
 
-console.log(typeof score);
+console.log(typeof myObj); // object
+console.log(typeof userEmail); // undefined
 
-console.log(typeof scoreValue);
+console.log(typeof score); // number
+
+console.log(typeof scoreValue); // number
