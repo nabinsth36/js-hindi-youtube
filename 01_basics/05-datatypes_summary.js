@@ -46,3 +46,26 @@ console.log(typeof userEmail); // undefined
 console.log(typeof score); // number
 
 console.log(typeof scoreValue); // number
+
+//*************************************** */
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "hiteshchoudharydotcom";
+
+let anotherName = "myYoutubemame";
+anotherName = "chaiaurcode";
+console.log(anotherName);
+console.log(myYoutubeName);
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl",
+};
+
+let userTwo = userOne;
+
+userTwo.email = "nabin@gmail.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
