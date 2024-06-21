@@ -23,13 +23,18 @@ console.log(JsUser["email"]);
 console.log(JsUser[mySym]);
 
 JsUser.email = "hitesh@chatgpt.com";
-Object.freeze(JsUser);
+// Object.freeze(JsUser);
 JsUser.email = "hitesh@msn.com";
 
-console.log(JsUser);
+// console.log(JsUser);
 
 JsUser.greeting = function () {
   console.log("Hello JsUser");
 };
 
-console.log(JsUser.greeting);
+JsUser.greetingTwo = function () {
+  return `Hello JsUser, ${this.name}`;
+};
+
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
