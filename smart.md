@@ -10,7 +10,7 @@ At Smart Printing, we are passionate about revolutionizing the printing industry
 
 ## Our Missions
 
-Innovative Solutions
+Printing with Innovative Solutions
 
 ## Our Services
 
