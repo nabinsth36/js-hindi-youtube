@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chai aur code</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("TypeScript");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addOptiLanguage("goLang");
+    addOptiLanguage("C++");
+    addOptiLanguage("Java");
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+    const thirdLang = document.querySelector("li:nth-child(3)");
+    const newLi2 = document.createElement("li");
+    newLi2.textContent = "Qbasic";
+    thirdLang.replaceWith(newLi2);
+
+    const forthLang = document.querySelector("li:nth-child(4)");
+    const newLi3 = document.createElement("li");
+    newLi3.textContent = "Fortran";
+    forthLang.replaceWith(newLi3);
+
+    const fifthLang = document.querySelector("li:nth-child(5)");
+    const newLi4 = document.createElement("li");
+    newLi4.textContent = "Python";
+    fifthLang.replaceWith(newLi4);
+    console.log(newLi4);
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+    const secLang = document.querySelector("li:nth-child(2)");
+    secLang.outerHTML = "<li>JavaScript</li>";
+
+    // remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
