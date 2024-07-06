@@ -40,5 +40,31 @@ const myCoding = [
 ];
 
 myCoding.forEach((item) => {
-  console.log(item.languageName);
+  //   console.log(item.languageName);
+});
+
+const studentsDetails = [
+  {
+    name: "John Doe",
+    age: 10,
+    class: 5,
+    subjects: ["Math", "Science", "English"],
+  },
+  {
+    name: "Rajan Shrestha",
+    age: 15,
+    class: 10,
+    subjects: ["Math", "Science", "English", "Nepali, Computer"],
+  },
+  {
+    name: "Goma Aryal",
+    age: 13,
+    class: 8,
+    subjects: ["Math", "Science", "English", "Nepali, Computer"],
+  },
+];
+
+studentsDetails.forEach((item) => {
+  console.log(item.name);
+  console.log(item.subjects);
 });
