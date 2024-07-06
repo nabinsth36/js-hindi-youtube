@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <style>
+      body {
+        background-color: #adadad;
+      }
+      h2 {
+        text-align: center;
+      }
+      .bmi-form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        align-content: center;
+        background-color: antiquewhite;
+        padding: 25px;
+      }
+
+      #result {
+        text-align: center;
+      }
+      .inputTab {
+        padding-bottom: 20px;
+      }
+
+      #result {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>BMI Calculator</h2>
+
+    <form action="" class="bmi-form">
+      <div class="inputTab">
+        <label for="height">Height in CM</label>
+        <input type="text" id="height" />
+      </div>
+      <div class="inputTab">
+        <label for="weight">Weight in KG</label>
+        <input type="text" id="weight" />
+      </div>
+      <button id="btn-calc">Calculate</button>
+      <div id="result"></div>
+      <div id="narrat"></div>
+    </form>
+
+    <div class="guide">
+      <h3>BMI Weight Guide</h3>
+      <p>Under Weight = Less than 18.6</p>
+      <p>Normal Range = 18.6 and 24.9</p>
+      <p>Overweight = Greater than 24.9</p>
+    </div>
+  </body>
+  <script>
+    const myForm = document.querySelector("form");
+    myForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const height = parseInt(document.getElementById("height").value);
+      const weight = parseInt(document.getElementById("weight").value);
+      const results = (document.getElementById("result").textContent = calcBMI(
+        height,
+        weight
+      ));
+      const narration = document.getElementById("narrat");
+      if (results < 18.6) {
+        narration.textContent =
+          "You are underweight. You should eat more healthy foods and do more exercise";
+      } else if (results >= 18.6 && results <= 24.9) {
+        narration.textContent =
+          "You are in the normal range. You should maintain your weight";
+      } else if (results > 24.9) {
+        narration.textContent =
+          "You are overweight. You should eat less and do more exercise";
+      }
+    });
+
+    function calcBMI(height, weight) {
+      if (height === "" || height < 0 || isNaN(height)) {
+        return `Please enter a valid height ${height}`;
+      } else if (weight === "" || weight < 0 || isNaN(weight)) {
+        return `Please enter a valid weight ${weight}`;
+      } else return ((weight / (height * height)) * 10000).toFixed(2);
+    }
+
+    // console.log(calcBMI(160, 75));
+  </script>
+</html>
