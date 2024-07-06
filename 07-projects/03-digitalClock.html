@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Local Time</title>
+    <style>
+      body {
+        background-color: #afafaf;
+      }
+
+      .center {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #clock {
+        font-size: 40px;
+        background-color: orange;
+        padding: 20px 50px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div id="banner"><h3>Time in your area</h3></div>
+      <div id="clock">8:58 PM</div>
+    </div>
+    <script>
+      const clock = document.getElementById("clock");
+
+      const currTime = () => {
+        let date = new Date();
+        return date.toLocaleTimeString();
+      };
+
+      setInterval(function () {
+        clock.innerHTML = currTime();
+        // console.log(currTime());
+      }, 1000);
+    </script>
+  </body>
+</html>
